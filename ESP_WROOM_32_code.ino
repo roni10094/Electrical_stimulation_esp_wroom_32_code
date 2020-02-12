@@ -1,7 +1,7 @@
 /*
 
 	Electrical Stimulation Circuit 
-				+
+		     +
 	ESP_WROOM_32 microcontroller
 	
 	Controlled by bluetooth through Android APP 
@@ -81,8 +81,8 @@ void device_on(){
       command(command_number);
     }
     stimulation();
-    delay(200 / frequency);
-    feedback();
+    delay(200 / frequency);		// stimulation period divided 5 times 
+    feedback();				// in order to get stimulation voltage feedback
     delay(200 / frequency);
     feedback();
     delay(200 / frequency);
@@ -110,7 +110,7 @@ void feedback()
   }
   else
   {
-    analogWrite(boost_pin, 0);					// When selected voltage reached, pwm stop
+    analogWrite(boost_pin, 0);		      // When selected voltage reached, pwm stop
   }
   Voltage_read = 0;
 }
