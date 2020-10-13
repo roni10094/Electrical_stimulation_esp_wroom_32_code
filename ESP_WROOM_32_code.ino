@@ -1,11 +1,11 @@
 /*
 
 	Electrical Stimulation Circuit 
-		     +
+		     + +
 	ESP_WROOM_32 microcontroller
 	
 	Controlled by bluetooth through Android APP 
-
+ 
 */
 
 // Load libraries
